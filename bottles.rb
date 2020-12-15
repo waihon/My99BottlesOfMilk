@@ -5,7 +5,7 @@ class Bottles
   end
 
   def song
-    verses(0, -3)
+    verses(99, -3)
   end
 
   def verses(high, low)
