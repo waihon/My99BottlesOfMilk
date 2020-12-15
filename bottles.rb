@@ -1,10 +1,11 @@
 class Bottles
   def initialize(beverage="milk", surface="wall")
     @beverage = beverage
+    @surface = surface
   end
 
   def song
-    verses(99, -3)
+    verses(0, -3)
   end
 
   def verses(high, low)
@@ -19,7 +20,7 @@ class Bottles
   end
 
   def initial_bottles(n)
-    "#{bottles(n).capitalize} on the wall, #{bottles(n)}.\n"
+    "#{bottles(n).capitalize} on the #{@surface}, #{bottles(n)}.\n"
   end
 
   def bottles(n)
@@ -35,14 +36,14 @@ class Bottles
 
   def remaining_bottles(n)
     if n > 0
-      "Take one down and pass it around, #{bottles(n-1)} on the wall.\n"
+      "Take one down and pass it around, #{bottles(n-1)} on the #{@surface}.\n"
     else
-      "Go to the store and buy some more, #{bottles(@max)} on the wall.\n"
+      "Go to the store and buy some more, #{bottles(@max)} on the #{@surface}.\n"
     end
   end
 end
 
 if __FILE__ == $0
-  bottles = Bottles.new("milk", "table")
+  bottles = Bottles.new("milk tea", "table")
   puts bottles.song
 end
