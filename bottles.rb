@@ -5,7 +5,7 @@ class Bottles
   end
 
   def song
-    verses(99, -3)
+    verses(99, 0)
   end
 
   def verses(high, low)
@@ -36,10 +36,14 @@ class Bottles
 
   def remaining_bottles(n)
     if n > 0
-      "Take one down and pass it around, #{bottles(n-1)} on the #{@surface}.\n"
+      "Take #{it(n)} down and pass it around, #{bottles(n-1)} on the #{@surface}.\n"
     else
       "Go to the store and buy some more, #{bottles(@max)} on the #{@surface}.\n"
     end
+  end
+  
+  def it(n)
+    n > 1 ? "one" : "it"
   end
 end
 
