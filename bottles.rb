@@ -1,5 +1,5 @@
 class Bottles
-  def initialize(beverage="milk")
+  def initialize(beverage="milk", surface="wall")
     @beverage = beverage
   end
 
@@ -43,6 +43,6 @@ class Bottles
 end
 
 if __FILE__ == $0
-  bottles = Bottles.new
+  bottles = Bottles.new("milk", "table")
   puts bottles.song
 end
