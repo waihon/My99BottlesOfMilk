@@ -1,4 +1,8 @@
 class Bottles
+  def initialize(beverage="milk")
+    @beverage = beverage
+  end
+
   def song
     verses(99, -3)
   end
@@ -26,7 +30,7 @@ class Bottles
              else
                 "no more bottles"
              end
-    result += " of milk"
+    result += " of #{@beverage}"
   end
 
   def remaining_bottles(n)
