@@ -44,6 +44,6 @@ class Bottles
 end
 
 if __FILE__ == $0
-  bottles = Bottles.new("milk tea", "table")
+  bottles = Bottles.new
   puts bottles.song
 end
